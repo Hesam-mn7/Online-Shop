@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#64b5f6</color>
+    <color name="colorPrimaryDark">#2286c3</color>
+    <color name="colorAccent">#64b5f6</color>
+    <color name="hintText">#AFAFAF</color>
+    <color name="border">#C5C4C4</color>
+    <color name="colorTitle">#F4F4F4</color>
+    <color name="colorGreen">#3AC13F</color>
+    <color name="colororange">#F15C2D</color>
+    <color name="black">#000</color>
+    <color name="tosi">#575757</color>
+    <color name="actioncolor">#656565</color>
+
+
+</resources>

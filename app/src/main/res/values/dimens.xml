@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="height_slide">190sp</dimen>
+    <dimen name="actionBarsizeTitle">22sp</dimen>
+    <dimen name="textSizeDetails">20sp</dimen>
+    <dimen name="textSizefragment">18sp</dimen>
+
+
+
+</resources>

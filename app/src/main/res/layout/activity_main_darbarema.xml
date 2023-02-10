@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityDarbarema"
+    android:layoutDirection="rtl">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/actionBarr"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/backimg"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/titleActionBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:text="درباره ما"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/backimg"
+            style="@style/titleactionbar"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        style="@style/linearDarbare1"
+        app:layout_constraintTop_toBottomOf="@id/actionBarr"
+        android:layout_marginTop="30dp"
+>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/account1"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            style="@style/textDarbare"
+            android:text="حسام الدین موسویون"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        style="@style/linearDarbare"
+        app:layout_constraintTop_toBottomOf="@id/ll1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/school"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            style="@style/textDarbare"
+            android:text="دانشجوی مهندسی کامپیوتر"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        style="@style/linearDarbare"
+        app:layout_constraintTop_toBottomOf="@id/ll2">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/email"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            style="@style/textDarbare"
+            android:text="hmousavioun@gmail.com"
+            android:textSize="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll4"
+        android:layout_width="match_parent"
+        style="@style/linearDarbare"
+        app:layout_constraintTop_toBottomOf="@id/ll3">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            style="@style/textDarbare"
+            android:text="09198067831"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll5"
+        android:layout_width="match_parent"
+        style="@style/linearDarbare"
+        app:layout_constraintTop_toBottomOf="@id/ll4">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/account_tie"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            style="@style/textDarbare"
+            android:text="مدرس : آقای دکتر وحید بختیاری"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll6"
+        android:layout_width="match_parent"
+        style="@style/linearDarbare"
+        app:layout_constraintTop_toBottomOf="@id/ll5">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/book_open_variant"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            style="@style/textDarbare"
+            android:text="دوره ی پکیج اندروید (مقدماتی)"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll7"
+        android:layout_width="match_parent"
+        style="@style/linearDarbare"
+        app:layout_constraintTop_toBottomOf="@id/ll6"
+>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/map_marker"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            style="@style/textDarbare"
+            android:text="مجتمع فنی تهران (میدان ونک)"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ll8"
+            android:layout_width="match_parent"
+            style="@style/linearDarbare"
+            app:layout_constraintTop_toBottomOf="@id/ll7"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calendar_blank"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                style="@style/textDarbare"
+                android:text="زمستان 1399"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/llnavigation"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="horizontal"
+            android:background="@color/colorTitle"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvHome"
+                android:text="خانه"
+                style="@style/actionbarTitle"
+                android:foreground="?attr/selectableItemBackground"
+                android:drawableTop="@drawable/ic_outline_home_black"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvMusic"
+                style="@style/actionbarTitle"
+                android:text="@string/nameMusic"
+                android:foreground="?attr/selectableItemBackground"
+                android:drawableTop="@drawable/ic_outline_music_note_24"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvProfile"
+                style="@style/actionbarTitle"
+                android:text="@string/nameProfile"
+                android:foreground="?attr/selectableItemBackground"
+                android:drawableTop="@drawable/ic_outline_account_box_24"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSettings"
+                style="@style/actionbarTitle"
+                android:text="@string/nameSetting"
+                android:foreground="?attr/selectableItemBackground"
+                android:drawableTop="@drawable/ic_outline_settings_24"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvDarbare"
+                style="@style/actionbarTitle"
+                android:text="@string/nameDarbare"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:foreground="?attr/selectableItemBackground"
+                android:drawableTop="@drawable/ic_baseline_info_24"
+                />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+

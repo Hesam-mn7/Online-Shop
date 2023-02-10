@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/border_product"
+    android:foreground="?attr/selectableItemBackground"
+    >
+
+    <ImageView
+        android:id="@+id/imgProduct"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/hedfone"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/tvtitleProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imgProduct"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="نام محصول"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"/>
+
+
+
+    <TextView
+        android:id="@+id/tvmodelProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvtitleProduct"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="10dp"
+        android:textSize="13sp"
+        app:fontFamily="@font/roboto"
+        android:text="مدل محصول"/>
+
+    <TextView
+        android:id="@+id/tvidProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvmodelProduct"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="شماره کالا"/>
+
+    <View
+        android:id="@+id/view"
+        style="@style/view"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/tvidProduct"/>
+    <TextView
+        android:id="@+id/tvvalueProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        android:text="قیمت محصول"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

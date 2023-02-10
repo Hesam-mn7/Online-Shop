@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityLocation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/actionBarr"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/backimg"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/titleActionBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:text="موقعیت فعلی"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/backimg"
+            style="@style/titleactionbar"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifloc"
+        android:layout_width="wrap_content"
+        android:layout_height="190dp"
+        android:src="@drawable/gifmap"
+        app:layout_constraintTop_toBottomOf="@id/actionBarr"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/gifloc"
+        android:background="@drawable/border_product"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tvtul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/textDetails"
+            android:text="طول جغرافیایی"
+            android:paddingRight="10dp"/>
+
+        <View
+            android:id="@+id/view1"
+            style="@style/view"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/tvtul" />
+
+        <TextView
+            android:id="@+id/tvarz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view1"
+            style="@style/textDetails"
+            android:text="عرض جغرافیایی"
+            android:paddingRight="10dp"/>
+
+        <View
+            android:id="@+id/view2"
+            style="@style/view"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/tvarz"/>
+        <TextView
+            android:id="@+id/tvertefa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view2"
+            style="@style/textDetails"
+            android:text="ارتفاع"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"/>
+
+        <TextView
+            android:id="@+id/tvlng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/textDetails"
+            android:text="0.0"
+            app:fontFamily="@font/calibri"
+            android:paddingLeft="30dp"/>
+        <TextView
+            android:id="@+id/tvlat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view1"
+            style="@style/textDetails"
+            android:text="0.0"
+            app:fontFamily="@font/calibri"
+            android:paddingLeft="30dp"/>
+        <TextView
+            android:id="@+id/tvalt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view2"
+            style="@style/textDetails"
+            android:text="0.0"
+            app:fontFamily="@font/calibri"
+            android:paddingLeft="30dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/pb"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toBottomOf="@id/lll"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/dots"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/btnback"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_button_blue"
+            android:text="بازگشت"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:layout_margin="10dp"/>
+        <Button
+            android:id="@+id/btnnamayesh"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_button_blue"
+            android:text="نمایش روی نقشه"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

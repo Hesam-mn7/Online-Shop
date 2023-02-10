@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivitySettings"
+    android:layoutDirection="rtl">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/actionBarr"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/backimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/titleActionBar"
+            style="@style/titleactionbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="10"
+            android:text="تنظیمات"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/backimg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/actionBarr"
+        >
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            android:src="@drawable/brightness_4"
+            android:layout_margin="10dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/img1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/settings"
+            android:text="رنگ پس زمینه"
+            android:gravity="center"
+            />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/rbnight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/settings"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/btnday"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="تیره"
+
+                />
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/btnday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/settings"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="روشن"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view1"
+        style="@style/view2"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/constDark" />
+
+
+    <View
+        android:id="@+id/view2"
+        style="@style/view2"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/colorAgahii" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/colorAgahii"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/view1">
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            android:src="@drawable/palette"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/img3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/settings"
+            android:text="رنگ مشخصات کالا"
+            android:gravity="center"
+            />
+
+        <RadioGroup
+            android:id="@+id/rgColorAgahi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:orientation="horizontal">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/rbAbi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/settings"
+                android:text="آبی"
+                />
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/rbmeshki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/settings"
+                android:text="مشکی"
+                />
+
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/view2">
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            android:src="@drawable/format_size"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/img2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/settings"
+            android:text="فونت"
+            android:gravity="center"
+            />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbDefult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/settings"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/rbandlso"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="پیش فرض"
+            />
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbandlso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/settings"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="اندلسو"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <View
+        android:id="@+id/view3"
+        style="@style/view2"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/constFont" />
+
+    <LinearLayout
+        android:id="@+id/shareApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/view3"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:foreground="?attr/selectableItemBackground"
+        >
+
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_share_abii" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/settings"
+            android:text="اشتراک گذاری"
+            android:gravity="center"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view4"
+        style="@style/view2"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/shareApp"
+        android:layout_marginTop="10dp"/>
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/nback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/view4"
+            android:text="ثبت تغییرات"
+            android:textSize="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/llnavigation"/>
+
+
+    <LinearLayout
+        android:id="@+id/llnavigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:background="@color/colorTitle"
+        >
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvHome"
+            android:text="خانه"
+            style="@style/actionbarTitle"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_outline_home_black"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvMusic"
+            style="@style/actionbarTitle"
+            android:text="@string/nameMusic"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_outline_music_note_24"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProfile"
+            style="@style/actionbarTitle"
+            android:text="@string/nameProfile"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_outline_account_box_24"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSettings"
+            style="@style/actionbarTitle"
+            android:text="@string/nameSetting"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_baseline_settings_24"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDarbare"
+            style="@style/actionbarTitle"
+            android:text="@string/nameDarbare"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_outline_info_24"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

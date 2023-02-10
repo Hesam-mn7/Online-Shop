@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityProfile"
+    android:orientation="vertical"
+    android:layoutDirection="rtl">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+       >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingBottom="60dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/actionBarr"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/colorPrimary"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/backimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_baseline_arrow_forward_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/titleActionBar"
+                    style="@style/titleactionbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="10"
+                    android:text="پروفایل من"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/backimg"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgpro"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/login"
+                app:layout_constraintTop_toBottomOf="@id/actionBarr" />
+
+            <TextView
+                android:id="@+id/tvtozihat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:text="برای ویرایش مشخصات اطلاعات زیر را به طور کامل وارد کنید."
+                android:textSize="18sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgpro" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="نام و نام خانوادگی"
+            app:errorIconDrawable="@drawable/ic_baseline_error_24"
+                app:errorTextAppearance="@style/text_in_layout_error_Style"
+                app:hintTextAppearance="@style/text_in_layout_hint_Style"
+                app:layout_constraintTop_toBottomOf="@id/tvtozihat"
+                app:startIconDrawable="@drawable/account1"
+                app:startIconTint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUserName"
+                    style="@style/edittextProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="شماره موبایل"
+                app:errorIconDrawable="@drawable/ic_baseline_error_24"
+                app:errorTextAppearance="@style/text_in_layout_error_Style"
+                app:hintTextAppearance="@style/text_in_layout_hint_Style"
+                app:layout_constraintTop_toBottomOf="@id/outlinedTextField"
+                app:startIconDrawable="@drawable/phone"
+                app:startIconTint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNumberPhone"
+                    style="@style/edittextProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField3"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="آدرس ایمیل"
+                app:errorIconDrawable="@drawable/ic_baseline_error_24"
+                app:errorTextAppearance="@style/text_in_layout_error_Style"
+                app:hintTextAppearance="@style/text_in_layout_hint_Style"
+                app:layout_constraintTop_toBottomOf="@id/outlinedTextField2"
+                app:startIconDrawable="@drawable/email"
+                app:startIconTint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    style="@style/edittextProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField4"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="رمز عبور"
+                app:errorIconDrawable="@drawable/ic_baseline_error_24"
+                app:errorTextAppearance="@style/text_in_layout_error_Style"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/colorPrimary"
+                app:hintTextAppearance="@style/text_in_layout_hint_Style"
+                app:layout_constraintTop_toBottomOf="@id/outlinedTextField3"
+                app:startIconDrawable="@drawable/ic_round_vpn_key_24"
+                app:startIconTint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    style="@style/edittextProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="120dp"
+                android:text="ثبت اطلاعات"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintTop_toBottomOf="@id/outlinedTextField4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llnavigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:background="@color/colorTitle"
+        >
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvHome"
+            android:text="خانه"
+            style="@style/actionbarTitle"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_outline_home_black"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvMusic"
+            style="@style/actionbarTitle"
+            android:text="@string/nameMusic"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_outline_music_note_24"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProfile"
+            style="@style/actionbarTitle"
+            android:text="@string/nameProfile"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_baseline_account_box_24"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSettings"
+            style="@style/actionbarTitle"
+            android:text="@string/nameSetting"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_outline_settings_24"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDarbare"
+            style="@style/actionbarTitle"
+            android:text="@string/nameDarbare"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_outline_info_24"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

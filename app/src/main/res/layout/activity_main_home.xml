@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityHome"
+    android:layoutDirection="rtl"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/actionBarr"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etsearch"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="45dp"
+            android:hint=" جستجو در همه کالا ها"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:drawableRight="@drawable/ic_baseline_search_24"
+            android:textColorHint="@color/hintText"
+            android:background="@drawable/border_search"
+            android:paddingRight="10dp"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgmylocation"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="25dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_my_location_24"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/actionBarr"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/sildeshow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical"
+                >
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_slide"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+<!--                <com.viewpagerindicator.CirclePageIndicator-->
+<!--                    android:id="@+id/indicator"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:fillColor="@color/colorPrimary"-->
+<!--                    app:pageColor="#fff"-->
+<!--                    />-->
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="bottom"
+                    app:centered="true"
+                    app:fillColor="@color/colorPrimary"
+                    app:pageColor="#fff"
+                    app:snap="false" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/moratabsazi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/sildeshow"
+                android:background="@drawable/border_product"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                >
+                <ImageView
+                    android:id="@+id/btnGridBlue"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_baseline_gridblue"
+                    style="@style/imagebutton"
+                    android:visibility="visible"
+                    />
+                <ImageView
+                    android:id="@+id/btnGridBlack"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_baseline_gridblack"
+                    style="@style/imagebutton"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:visibility="invisible"
+                    />
+                <ImageView
+                    android:id="@+id/btnListViewBlack"
+                    app:layout_constraintLeft_toRightOf="@id/btnGridBlue"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_baseline_listviewblack"
+                    style="@style/imagebutton"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:visibility="visible"
+                    />
+                <ImageView
+                    android:id="@+id/btnListViewBlue"
+                    app:layout_constraintLeft_toRightOf="@id/btnGridBlue"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_baseline_listviewblue"
+                    style="@style/imagebutton"
+                    android:visibility="invisible"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="مرتب سازی"
+                    android:layout_margin="10dp"
+                    android:textSize="22dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <GridView
+                android:numColumns="2"
+                android:id="@+id/gridviewProduct"
+                android:layout_width="match_parent"
+                android:layout_height="1800dp"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/moratabsazi"
+                android:visibility="visible"
+                />
+
+            <ListView
+                android:id="@+id/listviewProduct"
+                android:layout_width="match_parent"
+                android:layout_height="1840dp"
+                android:layout_margin="10dp"
+                android:dividerHeight="10dp"
+                android:divider="#fff"
+                app:layout_constraintTop_toBottomOf="@+id/moratabsazi"
+                android:visibility="invisible"
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/llnavigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:background="@color/colorTitle"
+        >
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvHome"
+            android:text="خانه"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            style="@style/actionbarTitle"
+            android:drawableTop="@drawable/ic_baseline_home_24_por"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvMusic"
+            style="@style/actionbarTitle"
+            android:text="@string/nameMusic"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_outline_music_note_24"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProfile"
+            style="@style/actionbarTitle"
+            android:text="@string/nameProfile"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_outline_account_box_24"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSettings"
+            style="@style/actionbarTitle"
+            android:text="@string/nameSetting"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_outline_settings_24"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDarbare"
+            style="@style/actionbarTitle"
+            android:text="@string/nameDarbare"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_outline_info_24"
+            />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
