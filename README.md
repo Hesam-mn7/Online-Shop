@@ -15,3 +15,5 @@ including:
 6. Gps Activity: Help user to choose the location on map for ordering goods.
 
 All information is loaded from web service and saved in SqLite database. In addition, Retrofit and JSON libraries have been used.
+
+https://www.linkedin.com/posts/hesam-mousavioun-643033238_instagram-android-java-activity-6956155707347894272-vXI-/?utm_source=share&utm_medium=member_desktop
