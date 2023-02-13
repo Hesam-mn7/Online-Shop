@@ -1,6 +1,6 @@
 # Online-Shop-Application
 
-Android application which people can purchase goods.
+Android application that people can purchase goods.
 
 including:
 
